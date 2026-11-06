@@ -1,11 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emprendimiento</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AudioElite | Audífonos High-End & Wireless</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
-    
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo">Audio<span>Elite</span></div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#ventajas">¿Por qué nosotros?</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Hero / Portada Principal -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="badge">Nueva Colección 2026</span>
+            <h1>Siente el Sonido en su <span class="highlight">Máxima Pureza</span></h1>
+            <p>Descubre la fusión perfecta entre tecnología de cancelación de ruido, audio de alta fidelidad y un diseño creado para tu confort diario.</p>
+            <div class="hero-buttons">
+                <a href="#productos" class="btn btn-primary">Ver Catálogo</a>
+                <a href="https://wa.me/593997714362?text=¡Hola!%20Deseo%20más%20información%20sobre%20los%20audífonos" target="_blank" class="btn btn-secondary">
+                    <i class="fa-brands fa-whatsapp"></i> Chatear por WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="glow-effect"></div>
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop" alt="Audífonos Premium">
+        </div>
+    </header>
+
+    <!-- Características Destacadas -->
+    <section id="ventajas" class="features">
+        <div class="feature-card">
+            <i class="fa-solid fa-headphone-high-def"></i>
+            <h3>Audio HD Superior</h3>
+            <p>Graves profundos y agudos nítidos calibrados para audiófilos exigentes.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-battery-full"></i>
+            <h3>Batería Extrema</h3>
+            <p>Hasta 40 horas de reproducción continua con carga rápida en minutos.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Cancelación de Ruido</h3>
+            <p>Aísla el ruido exterior y sumérgete en tu música sin distracciones.</p>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section id="productos" class="products">
+        <h2 class="section-title">Modelos <span>Destacados</span></h2>
+        <div class="product-grid">
+
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <!-- Frente de la Tarjeta -->
+                    <div class="card-front">
+                        <div class="product-tag">Bestseller</div>
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=600&auto=format&fit=crop" alt="Studio Pro Wireless">
+                        </div>
+                        <div class="product-info">
+                            <h3>Studio Pro Wireless</h3>
+                            <p class="desc">Sonido de estudio profesional sin cables.</p>
+                            <div class="product-bottom">
+                                <span class="price">$89.99</span>
+                                <button type="button" class="btn-detail">Ver detalle <i class="fa-solid fa-rotate"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Reverso de la Tarjeta (Detalle Escondido) -->
+                    <div class="card-back" style="background-image: url('https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-back-overlay">
+                            <h3>Studio Pro Wireless</h3>
+                            <ul class="specs-list">
+                                <li><i class="fa-solid fa-check"></i> Cancelación activa de ruido (ANC)</li>
+                                <li><i class="fa-solid fa-check"></i> Almohadillas de espuma con memoria</li>
+                                <li><i class="fa-solid fa-check"></i> Micrófono HD ultranítido</li>
+                                <li><i class="fa-solid fa-check"></i> Conexión Bluetooth 5.3 instantánea</li>
+                            </ul>
+                            <div class="back-bottom">
+                                <span class="price">$89.99</span>
+                                <a href="https://wa.me/593997714362?text=Hola,%20me%20interesa%20comprar%20el%20modelo%20Studio%20Pro%20Wireless" target="_blank" class="btn-buy">
+                                    <i class="fa-brands fa-whatsapp"></i> Comprar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <!-- Frente de la Tarjeta -->
+                    <div class="card-front">
+                        <div class="product-tag">Deportivo</div>
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=600&auto=format&fit=crop" alt="Earbuds Sport ANC">
+                        </div>
+                        <div class="product-info">
+                            <h3>Earbuds Sport ANC</h3>
+                            <p class="desc">Resistencia y estabilidad para entrenamientos.</p>
+                            <div class="product-bottom">
+                                <span class="price">$59.99</span>
+                                <button type="button" class="btn-detail">Ver detalle <i class="fa-solid fa-rotate"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Reverso de la Tarjeta (Detalle Escondido) -->
+                    <div class="card-back" style="background-image: url('https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-back-overlay">
+                            <h3>Earbuds Sport ANC</h3>
+                            <ul class="specs-list">
+                                <li><i class="fa-solid fa-check"></i> Protección IPX7 contra sudor y agua</li>
+                                <li><i class="fa-solid fa-check"></i> Ensamble ergonómico antideslizante</li>
+                                <li><i class="fa-solid fa-check"></i> Estuche con carga inalámbrica Qi</li>
+                                <li><i class="fa-solid fa-check"></i> Modo ambiente para exteriores</li>
+                            </ul>
+                            <div class="back-bottom">
+                                <span class="price">$59.99</span>
+                                <a href="https://wa.me/593997714362?text=Hola,%20me%20interesa%20comprar%20el%20modelo%20Earbuds%20Sport%20ANC" target="_blank" class="btn-buy">
+                                    <i class="fa-brands fa-whatsapp"></i> Comprar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <div class="card-inner">
+                    <!-- Frente de la Tarjeta -->
+                    <div class="card-front">
+                        <div class="product-tag">Gamer</div>
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1599669454699-248893623440?q=80&w=600&auto=format&fit=crop" alt="Gaming Headset RGB">
+                        </div>
+                        <div class="product-info">
+                            <h3>Gaming Ultra RGB</h3>
+                            <p class="desc">Inmersión acústica total para jugadores.</p>
+                            <div class="product-bottom">
+                                <span class="price">$74.99</span>
+                                <button type="button" class="btn-detail">Ver detalle <i class="fa-solid fa-rotate"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Reverso de la Tarjeta (Detalle Escondido) -->
+                    <div class="card-back" style="background-image: url('https://images.unsplash.com/photo-1599669454699-248893623440?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-back-overlay">
+                            <h3>Gaming Ultra RGB</h3>
+                            <ul class="specs-list">
+                                <li><i class="fa-solid fa-check"></i> Sonido envolvente 7.1 Virtual</li>
+                                <li><i class="fa-solid fa-check"></i> Latencia ultrabaja (38ms)</li>
+                                <li><i class="fa-solid fa-check"></i> Luces LED RGB personalizables</li>
+                                <li><i class="fa-solid fa-check"></i> Micrófono con cancelación de ruido</li>
+                            </ul>
+                            <div class="back-bottom">
+                                <span class="price">$74.99</span>
+                                <a href="https://wa.me/593997714362?text=Hola,%20me%20interesa%20comprar%20el%20modelo%20Gaming%20Ultra%20RGB" target="_blank" class="btn-buy">
+                                    <i class="fa-brands fa-whatsapp"></i> Comprar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/593997714362?text=¡Hola!%20Quiero%20consultar%20sobre%20tus%20audífonos" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="quote-container">
+            <p class="quote">"Escuchar una gran canción es un placer, pero escucharla con la fidelidad adecuada es una experiencia que transforma tu día."</p>
+            <span class="author">— Tu Pasión por el Sonido</span>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AudioElite. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

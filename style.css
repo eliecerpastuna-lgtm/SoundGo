@@ -1,0 +1,526 @@
+/* ==========================================================================
+   Variables Globales y Reset
+   ========================================================================== */
+:root {
+    --bg-dark: #0b0f19;
+    --card-bg: #131b2e;
+    --accent: #00f2fe;
+    --accent-gradient: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    --whatsapp-color: #25d366;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Navegación
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8%;
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   Sección Hero
+   ========================================================================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85vh;
+    padding: 4rem 8%;
+    gap: 3rem;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(0, 198, 255, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(0, 198, 255, 0.3);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.85rem 1.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--accent-gradient);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 198, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 198, 255, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    position: relative;
+    z-index: 2;
+}
+
+.glow-effect {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--accent);
+    filter: blur(120px);
+    opacity: 0.3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   Características
+   ========================================================================== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 8% 5rem 8%;
+}
+
+.feature-card {
+    background: rgba(23, 31, 51, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Productos & Efecto 3D Flip (Giro 180º)
+   ========================================================================== */
+.products {
+    padding: 5rem 8%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.section-title span {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Tarjeta y Perspectiva 3D */
+.product-card {
+    background-color: transparent;
+    height: 440px;
+    perspective: 1000px; /* Sensación de profundidad 3D */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Al tocar o pasar el cursor por la tarjeta, gira 180° */
+.product-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras Frontal y Trasera */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* CARA FRONTAL */
+.card-front {
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+.product-img {
+    height: 240px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.product-info .desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-detail {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--accent);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.3s ease;
+}
+
+.btn-detail:hover {
+    background: rgba(0, 242, 254, 0.15);
+}
+
+/* CARA TRASERA */
+.card-back {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card-back-overlay {
+    background: rgba(7, 10, 18, 0.88); /* Capa oscura para resaltar el texto */
+    backdrop-filter: blur(6px);
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-back-overlay h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.specs-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.specs-list li {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.specs-list li i {
+    color: var(--accent);
+    font-size: 0.85rem;
+}
+
+.back-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.btn-buy {
+    background: var(--accent-gradient);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.btn-buy:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   Botón Flotante de WhatsApp
+   ========================================================================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--whatsapp-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    z-index: 2000;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    background: #05070d;
+    padding: 4rem 8% 2rem 8%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.quote-container {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    padding: 2rem;
+    border-left: 3px solid var(--accent);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 0 12px 12px 0;
+}
+
+.quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #cbd5e1;
+    margin-bottom: 0.8rem;
+}
+
+.author {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.footer-bottom {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+}
+
+/* ==========================================================================
+   Adaptabilidad (Responsive Design)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+    }
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+}
